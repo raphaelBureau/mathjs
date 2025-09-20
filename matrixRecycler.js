@@ -34,16 +34,16 @@ export class MatrixRecycler {
         this.intermediateValues[11] = mat[12] * vecmat[2] + mat[13] * vecmat[5] + mat[14] * vecmat[8] + mat[15] * vecmat[11];
 
         vecmat[0] = this.intermediateValues[0];
-        vecmat[1] = this.intermediateValues[1];
-        vecmat[2] = this.intermediateValues[2];
-        vecmat[3] = this.intermediateValues[3];
-        vecmat[4] = this.intermediateValues[4];
-        vecmat[5] = this.intermediateValues[5];
-        vecmat[6] = this.intermediateValues[6];
-        vecmat[7] = this.intermediateValues[7];
-        vecmat[8] = this.intermediateValues[8];
-        vecmat[9] = this.intermediateValues[9];
-        vecmat[10] = this.intermediateValues[10];
+        vecmat[3] = this.intermediateValues[1];
+        vecmat[6] = this.intermediateValues[2];
+        vecmat[9] = this.intermediateValues[3];
+        vecmat[1] = this.intermediateValues[4];
+        vecmat[4] = this.intermediateValues[5];
+        vecmat[7] = this.intermediateValues[6];
+        vecmat[10] = this.intermediateValues[7];
+        vecmat[2] = this.intermediateValues[8];
+        vecmat[5] = this.intermediateValues[9];
+        vecmat[8] = this.intermediateValues[10];
         vecmat[11] = this.intermediateValues[11];
     }
     MatProd(mat1, mat2) {
