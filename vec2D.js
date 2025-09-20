@@ -16,11 +16,14 @@
 //here, V2D.Scl returns a new vector array. AddR and SclR recycle the same array and saves 2 declarations
 export class V2D {
     static Unv(vec) { //get unit vector/normalized vector
-        let magnitude = V2D.Mag(vec);
-        if(magnitude == 0) {
-            return [0,0];//prevent DivideByZero
+        let result = new Float32Array(2);
+        result[0] = V2D.Mag(vec);
+        if(result[0] == 0) {
+            return result;//prevent DivideByZero
         }
-        return [vec[0] / magnitude, vec[1] / magnitude];
+        result[1] = vec[1] / result[0];
+        result[0] = vec[0] / result[0]
+        return result;
     }
     static UnvR(vec) { //get unit vector/normalized vector
         let magnitude = V2D.Mag(vec);

@@ -7,7 +7,7 @@ export default class MatrixRecycler {
         this.intermediateValues = new Float32Array(16); //this is intended to be ran synchronously
     }
     VecProd(mat, vec) {
-
+        
     }
     MatProd(mat1, mat2) {
 
