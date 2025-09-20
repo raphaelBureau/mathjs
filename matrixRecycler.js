@@ -17,6 +17,35 @@ export class MatrixRecycler {
         vec[2] = this.intermediateValues[2];
         vec[3] = this.intermediateValues[3];
     }
+    Vec3Prod(mat, vecmat) { //vecmat is a matrix of 3 vectors
+        this.intermediateValues[0] = mat[0] * vecmat[0] + mat[1] * vecmat[4] + mat[2] * vecmat[8] + mat[3] * vecmat[12];
+        this.intermediateValues[1] = mat[4] * vecmat[0] + mat[5] * vecmat[4] + mat[6] * vecmat[8] + mat[7] * vecmat[12];
+        this.intermediateValues[2] = mat[8] * vecmat[0] + mat[9] * vecmat[4] + mat[10] * vecmat[8] + mat[11] * vecmat[12];
+        this.intermediateValues[3] = mat[12] * vecmat[0] + mat[13] * vecmat[4] + mat[14] * vecmat[8] + mat[15] * vecmat[12];
+
+        this.intermediateValues[4] = mat[0] * vecmat[1] + mat[1] * vecmat[5] + mat[2] * vecmat[9] + mat[3] * vecmat[13];
+        this.intermediateValues[5] = mat[4] * vecmat[1] + mat[5] * vecmat[5] + mat[6] * vecmat[9] + mat[7] * vecmat[13];
+        this.intermediateValues[6] = mat[8] * vecmat[1] + mat[9] * vecmat[5] + mat[10] * vecmat[9] + mat[11] * vecmat[13];
+        this.intermediateValues[7] = mat[12] * vecmat[1] + mat[13] * vecmat[5] + mat[14] * vecmat[9] + mat[15] * vecmat[13];
+
+        this.intermediateValues[8] = mat[0] * vecmat[2] + mat[1] * vecmat[6] + mat[2] * vecmat[10] + mat[3] * vecmat[14];
+        this.intermediateValues[9] = mat[4] * vecmat[2] + mat[5] * vecmat[6] + mat[6] * vecmat[10] + mat[7] * vecmat[14];
+        this.intermediateValues[10] = mat[8] * vecmat[2] + mat[9] * vecmat[6] + mat[10] * vecmat[10] + mat[11] * vecmat[14];
+        this.intermediateValues[11] = mat[12] * vecmat[2] + mat[13] * vecmat[6] + mat[14] * vecmat[10] + mat[15] * vecmat[14];
+
+        vecmat[0] = this.intermediateValues[0];
+        vecmat[1] = this.intermediateValues[1];
+        vecmat[2] = this.intermediateValues[2];
+        vecmat[3] = this.intermediateValues[3];
+        vecmat[4] = this.intermediateValues[4];
+        vecmat[5] = this.intermediateValues[5];
+        vecmat[6] = this.intermediateValues[6];
+        vecmat[7] = this.intermediateValues[7];
+        vecmat[8] = this.intermediateValues[8];
+        vecmat[9] = this.intermediateValues[9];
+        vecmat[10] = this.intermediateValues[10];
+        vecmat[11] = this.intermediateValues[11];
+    }
     MatProd(mat1, mat2) {
         this.intermediateValues[0] = mat1[0] * mat2[0] + mat1[1] * mat2[4] + mat1[2] * mat2[8] + mat1[3] * mat2[12];
         this.intermediateValues[1] = mat1[0] * mat2[1] + mat1[1] * mat2[5] + mat1[2] * mat2[9] + mat1[3] * mat2[13];
