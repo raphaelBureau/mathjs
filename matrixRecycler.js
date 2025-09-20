@@ -83,4 +83,38 @@ export default class MatrixRecycler {
         matrix[15] = 1;
         return matrix;
     }
+    Transpose(mat) {
+        //this.intermediateValues[0] = mat[0];
+        this.intermediateValues[1] = mat[4];
+        this.intermediateValues[2] = mat[8];
+        this.intermediateValues[3] = mat[12];
+        this.intermediateValues[4] = mat[1];
+        this.intermediateValues[5] = mat[5];
+        this.intermediateValues[6] = mat[9];
+        this.intermediateValues[7] = mat[13];
+        this.intermediateValues[8] = mat[2];
+        this.intermediateValues[9] = mat[6];
+        this.intermediateValues[10] = mat[10];
+        this.intermediateValues[11] = mat[14];
+        this.intermediateValues[12] = mat[3];
+        this.intermediateValues[13] = mat[7];
+        this.intermediateValues[14] = mat[11];
+        this.intermediateValues[15] = mat[15];
+        //mat[0] = this.intermediateValues[0];
+        mat[1] = this.intermediateValues[1];
+        mat[2] = this.intermediateValues[2];
+        mat[3] = this.intermediateValues[3];
+        mat[4] = this.intermediateValues[4];
+        mat[5] = this.intermediateValues[5];
+        mat[6] = this.intermediateValues[6];
+        mat[7] = this.intermediateValues[7];
+        mat[8] = this.intermediateValues[8];
+        mat[9] = this.intermediateValues[9];
+        mat[10] = this.intermediateValues[10];
+        mat[11] = this.intermediateValues[11];
+        mat[12] = this.intermediateValues[12];
+        mat[13] = this.intermediateValues[13];
+        mat[14] = this.intermediateValues[14];
+        mat[15] = this.intermediateValues[15];
+    }
 }
