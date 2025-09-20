@@ -75,4 +75,12 @@ export default class MatrixRecycler {
         result[14] = mat1[12] * mat2[2] + mat1[13] * mat2[6] + mat1[14] * mat2[10] + mat1[15] * mat2[14];
         result[15] = mat1[12] * mat2[3] + mat1[13] * mat2[7] + mat1[14] * mat2[11] + mat1[15] * mat2[15];
     }
+    static Identity() {
+        let matrix = new Float32Array(16);
+        matrix[0] = 1;
+        matrix[5] = 1;
+        matrix[10] = 1;
+        matrix[15] = 1;
+        return matrix;
+    }
 }
