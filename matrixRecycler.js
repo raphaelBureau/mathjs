@@ -82,6 +82,7 @@ export class MatrixRecycler {
         mat2[12] = this.intermediateValues[12];
         mat2[13] = this.intermediateValues[13];
         mat2[14] = this.intermediateValues[14];
+        mat2[15] = this.intermediateValues[15];
     }
     MatProdInto(mat1,mat2,result) {
         result[0] = mat1[0] * mat2[0] + mat1[1] * mat2[4] + mat1[2] * mat2[8] + mat1[3] * mat2[12];
